@@ -59,7 +59,7 @@ namespace FrontOrdemServico.View
             }
             else
             {
-                var form = new FormItem(dataGridView.CurrentRow.Cells, true);
+                var form = new FormItem(dataGridView.CurrentRow.Cells, false, true);
                 form.ShowDialog();
             }
         }
@@ -171,7 +171,7 @@ namespace FrontOrdemServico.View
 
         private void FormPrincipalItem_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter && textBoxPesquisaItem.Focused)
             {
                 buttonPesquisaItem_Click(sender, e);
             }
@@ -197,11 +197,6 @@ namespace FrontOrdemServico.View
         private void comboBoxPorItem_SelectedIndexChanged(object sender, EventArgs e)
         {
             AtualizaTela();
-        }
-
-        private void buttonPesquisaItem_KeyDown(object sender, KeyEventArgs e)
-        {
-
         }
     }
 }

@@ -47,24 +47,26 @@
             // 
             // buttonCancelar
             // 
+            buttonCancelar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
             buttonCancelar.Location = new System.Drawing.Point(536, 212);
             buttonCancelar.Name = "buttonCancelar";
             buttonCancelar.Size = new System.Drawing.Size(61, 36);
             buttonCancelar.TabIndex = 11;
             buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            buttonCancelar.UseVisualStyleBackColor = true;
+            buttonCancelar.UseVisualStyleBackColor = false;
             buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonSalvar
             // 
+            buttonSalvar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
             buttonSalvar.Location = new System.Drawing.Point(469, 212);
             buttonSalvar.Name = "buttonSalvar";
             buttonSalvar.Size = new System.Drawing.Size(61, 36);
             buttonSalvar.TabIndex = 10;
             buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            buttonSalvar.UseVisualStyleBackColor = true;
+            buttonSalvar.UseVisualStyleBackColor = false;
             buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // label1
@@ -78,6 +80,7 @@
             // 
             // textBoxNome
             // 
+            this.textBoxNome.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxNome.Location = new System.Drawing.Point(8, 24);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(324, 23);
@@ -85,6 +88,7 @@
             // 
             // textBoxCodigoReferencia
             // 
+            this.textBoxCodigoReferencia.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxCodigoReferencia.Location = new System.Drawing.Point(338, 24);
             this.textBoxCodigoReferencia.Name = "textBoxCodigoReferencia";
             this.textBoxCodigoReferencia.Size = new System.Drawing.Size(152, 23);
@@ -102,9 +106,9 @@
             // textBoxCodigo
             // 
             this.textBoxCodigo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxCodigo.Enabled = false;
             this.textBoxCodigo.Location = new System.Drawing.Point(496, 24);
             this.textBoxCodigo.Name = "textBoxCodigo";
+            this.textBoxCodigo.ReadOnly = true;
             this.textBoxCodigo.Size = new System.Drawing.Size(101, 23);
             this.textBoxCodigo.TabIndex = 5;
             this.textBoxCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -120,6 +124,7 @@
             // 
             // textBoxTipo
             // 
+            this.textBoxTipo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxTipo.Location = new System.Drawing.Point(8, 69);
             this.textBoxTipo.Name = "textBoxTipo";
             this.textBoxTipo.Size = new System.Drawing.Size(589, 23);
@@ -136,6 +141,7 @@
             // 
             // textBoxObservacao
             // 
+            this.textBoxObservacao.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxObservacao.Location = new System.Drawing.Point(8, 116);
             this.textBoxObservacao.Multiline = true;
             this.textBoxObservacao.Name = "textBoxObservacao";

@@ -16,7 +16,7 @@ namespace FrontOrdemServico.View
     {
         bool Editando = false;
 
-        public FormItem(DataGridViewCellCollection prRegistroSelecionado = null, bool prEditando = false)
+        public FormItem(DataGridViewCellCollection prRegistroSelecionado = null, bool prEditando = false, bool prVisualizando = false)
         {
             InitializeComponent();
 
@@ -32,12 +32,13 @@ namespace FrontOrdemServico.View
                     textBoxTipo.Text = prRegistroSelecionado[3].Value.ToString();
 
                 if (prRegistroSelecionado[4].Value != null)
-                    textBoxObservacao.Text = prRegistroSelecionado[4].Value.ToString();              
+                    textBoxObservacao.Text = prRegistroSelecionado[4].Value.ToString();
 
+                textBoxCodigo.Enabled = !prEditando;
                 textBoxCodigoReferencia.Enabled = !prEditando;
-                textBoxCodigoReferencia.BackColor = Color.White;
-                
-                AtualizarPermissaoFormulario(Editando);
+
+                if (prVisualizando)
+                    AtualizarPermissaoFormulario(prVisualizando);
             }            
         }
 

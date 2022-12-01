@@ -26,10 +26,9 @@ namespace FrontOrdemServico
             form.ShowDialog();
         }
 
-        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //FormConsulta form = new FormConsulta();
-            //form.ShowDialog();
+
         }
     }
 }

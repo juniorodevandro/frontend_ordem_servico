@@ -49,6 +49,11 @@
             this.buttonUltimaItem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Codigo_Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo_referencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacao_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -199,7 +204,7 @@
             "Tipo"});
             this.comboBoxPorItem.Location = new System.Drawing.Point(719, 7);
             this.comboBoxPorItem.Name = "comboBoxPorItem";
-            this.comboBoxPorItem.Size = new System.Drawing.Size(459, 38);
+            this.comboBoxPorItem.Size = new System.Drawing.Size(465, 38);
             this.comboBoxPorItem.TabIndex = 14;
             this.comboBoxPorItem.SelectedIndexChanged += new System.EventHandler(this.comboBoxPorItem_SelectedIndexChanged);
             // 
@@ -317,15 +322,55 @@
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo_Item,
+            this.codigo_referencia,
+            this.dataGridViewTextBoxColumn2,
+            this.tipo_item,
+            this.observacao_item});
+            this.dataGridView.Location = new System.Drawing.Point(6, 0);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowTemplate.Height = 25;
-            this.dataGridView.Size = new System.Drawing.Size(1190, 351);
+            this.dataGridView.Size = new System.Drawing.Size(1178, 351);
             this.dataGridView.TabIndex = 0;
             this.dataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView_CellFormatting);
             this.dataGridView.DoubleClick += new System.EventHandler(this.dataGridView_DoubleClick);
+            // 
+            // Codigo_Item
+            // 
+            this.Codigo_Item.DataPropertyName = "codigo";
+            this.Codigo_Item.HeaderText = "Código";
+            this.Codigo_Item.Name = "Codigo_Item";
+            this.Codigo_Item.ReadOnly = true;
+            // 
+            // codigo_referencia
+            // 
+            this.codigo_referencia.DataPropertyName = "nome";
+            this.codigo_referencia.HeaderText = "Nome";
+            this.codigo_referencia.Name = "codigo_referencia";
+            this.codigo_referencia.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "codigoReferencia";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Código de referência";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // tipo_item
+            // 
+            this.tipo_item.DataPropertyName = "tipo";
+            this.tipo_item.HeaderText = "Tipo";
+            this.tipo_item.Name = "tipo_item";
+            this.tipo_item.ReadOnly = true;
+            // 
+            // observacao_item
+            // 
+            this.observacao_item.DataPropertyName = "observacao";
+            this.observacao_item.HeaderText = "Observação";
+            this.observacao_item.Name = "observacao_item";
+            this.observacao_item.ReadOnly = true;
             // 
             // Código
             // 
@@ -410,5 +455,11 @@
         private DataGridViewTextBoxColumn codigo;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private ComboBox comboBoxPorItem;
+        private DataGridViewTextBoxColumn Codigo_a;
+        private DataGridViewTextBoxColumn Codigo_Item;
+        private DataGridViewTextBoxColumn codigo_referencia;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn tipo_item;
+        private DataGridViewTextBoxColumn observacao_item;
     }
 }

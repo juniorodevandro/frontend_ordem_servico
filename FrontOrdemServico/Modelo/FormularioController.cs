@@ -23,7 +23,7 @@ namespace FrontOrdemServico.Modelo
             {
                 if (this.Controls[i] is Button)
                 {
-                    this.Controls[i].Enabled = prEditando;                   
+                    this.Controls[i].Enabled = !prEditando;                   
                 }
             }
         }
@@ -32,20 +32,17 @@ namespace FrontOrdemServico.Modelo
         {
             for (int i = 0; i < this.Controls.Count; i++)
             {
-                if (this.Controls[i].Enabled)
+                if (this.Controls[i] is TextBox)
                 {
-                    if (this.Controls[i] is TextBox)
-                    {
-                        this.Controls[i].Enabled = prEditando;
-                        this.Controls[i].BackColor = Color.White;
-                    }
-
-                    if (this.Controls[i] is ComboBox)
-                    {
-                        this.Controls[i].Enabled = prEditando;
-                        this.Controls[i].BackColor = Color.White;
-                    }
+                    this.Controls[i].Enabled = !prEditando;
+                    this.Controls[i].BackColor = Color.White;
                 }
+
+                if (this.Controls[i] is ComboBox)
+                {
+                    this.Controls[i].Enabled = !prEditando;
+                    this.Controls[i].BackColor = Color.White;
+                }               
             }
  
             AtualizarPermissaoBotao(prEditando);
