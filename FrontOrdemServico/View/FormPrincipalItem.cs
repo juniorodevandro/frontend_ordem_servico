@@ -180,6 +180,14 @@ namespace FrontOrdemServico.View
             {
                 this.Close();
             }
+
+            if (e.KeyCode == Keys.F5)
+            {
+                paginaItem.Value = 1;
+                qtdePaginaItem.Value = 20;
+
+                AtualizaTela();
+            }
         }
 
         private void FormPrincipalItem_Load(object sender, EventArgs e)

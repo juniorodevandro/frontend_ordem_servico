@@ -73,16 +73,6 @@ namespace FrontOrdemServico.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cidade32X32 {
-            get {
-                object obj = ResourceManager.GetObject("Cidade32X32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Conta32X32 {
             get {
                 object obj = ResourceManager.GetObject("Conta32X32", resourceCulture);
@@ -103,9 +93,9 @@ namespace FrontOrdemServico.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Excluir32X32 {
+        internal static System.Drawing.Bitmap estoque {
             get {
-                object obj = ResourceManager.GetObject("Excluir32X32", resourceCulture);
+                object obj = ResourceManager.GetObject("estoque", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +103,19 @@ namespace FrontOrdemServico.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Financeiro {
+        internal static System.Drawing.Bitmap estoque_pronto {
             get {
-                object obj = ResourceManager.GetObject("Financeiro", resourceCulture);
+                object obj = ResourceManager.GetObject("estoque-pronto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Excluir32X32 {
+            get {
+                object obj = ResourceManager.GetObject("Excluir32X32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,29 @@ namespace FrontOrdemServico.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ordem {
+            get {
+                object obj = ResourceManager.GetObject("Ordem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pessoa32X32 {
             get {
                 object obj = ResourceManager.GetObject("Pessoa32X32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Produto32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Produto32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

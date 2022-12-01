@@ -118,26 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Editar32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Editar32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Conta32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Conta32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SetaPrimeira32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SetaPrimeira32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pessoa32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pessoa32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SetaUltima32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SetaUltima32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pessoa32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pessoa32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cancelar32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancelar32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Excluir32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Excluir32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SetaUltima32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SetaUltima32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Editar32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Editar32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sair32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sair32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,14 +142,11 @@
   <data name="Usuario32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Usuario32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Financeiro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Financeiro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cidade32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cidade32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Lupa32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lupa32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pessoa32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pessoa32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Setaproxima32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Setaproxima32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +160,16 @@
   <data name="SetaAnterior32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SetaAnterior32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cancelar32X32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cancelar32X32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Produto32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Produto32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ordem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ordem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="estoque" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\estoque.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="estoque-pronto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\estoque-pronto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

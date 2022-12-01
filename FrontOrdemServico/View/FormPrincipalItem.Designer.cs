@@ -235,7 +235,7 @@
             this.qtdePaginaItem.Size = new System.Drawing.Size(65, 36);
             this.qtdePaginaItem.TabIndex = 12;
             this.qtdePaginaItem.Value = new decimal(new int[] {
-            10,
+            20,
             0,
             0,
             0});
