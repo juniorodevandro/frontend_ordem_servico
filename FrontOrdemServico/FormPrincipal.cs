@@ -26,9 +26,10 @@ namespace FrontOrdemServico
             form.ShowDialog();
         }
 
-        private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormPrincipalEstoque form = new FormPrincipalEstoque();
+            form.ShowDialog();
         }
     }
 }

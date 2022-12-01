@@ -30,7 +30,7 @@ namespace FrontOrdemServico.View
             bool ordemDesc = comboBoxOrdenacaoItem.SelectedIndex > 0;
             int campoOrdenar = comboBoxPorItem.SelectedIndex;
 
-            this.paginacao = await ItemServicos.GetItem(skip, take, valor, ordemDesc, campoOrdenar);
+            this.paginacao = await ItemServicos.GetItemPaginacao(skip, take, valor, ordemDesc, campoOrdenar);
 
             dataGridView.DataSource = paginacao.Dados;
         }

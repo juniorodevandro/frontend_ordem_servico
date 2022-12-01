@@ -61,7 +61,7 @@ namespace FrontOrdemServico.View
             item.Nome = textBoxNome.Text;
             item.CodigoReferencia = textBoxCodigoReferencia.Text;
             item.Tipo = textBoxTipo.Text;
-            item.Observacao = "textBoxObservacao.Text";
+            item.Observacao = textBoxObservacao.Text;
 
             bool retorno = await ItemServicos.PutItem(item);
 

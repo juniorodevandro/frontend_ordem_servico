@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPessoa));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.checkBoxOrdenar = new System.Windows.Forms.CheckBox();
@@ -119,7 +120,6 @@
             // 
             // buttonPesquisa
             // 
-            //this.buttonPesquisa.Image = global::FrontOrdemServico.Properties.Resources.Lupa32X32;
             this.buttonPesquisa.Location = new System.Drawing.Point(164, 12);
             this.buttonPesquisa.Name = "buttonPesquisa";
             this.buttonPesquisa.Size = new System.Drawing.Size(99, 40);
@@ -532,6 +532,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPessoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pessoa";

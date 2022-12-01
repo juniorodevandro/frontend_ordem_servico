@@ -13,5 +13,12 @@ namespace FrontOrdemServico.Modelo
         public string Nome { get; set; } = string.Empty;
         public string Tipo { get; set; } = string.Empty;
         public string? Observacao { get; set; }
+
+        override
+
+        public string ToString()
+        {
+            return CodigoReferencia + " - " + Nome;
+        }
     }
 }

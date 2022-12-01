@@ -13,7 +13,31 @@ namespace FrontOrdemServico.Servicos
 {
     public class ItemServicos
     {
-        public static async Task<PaginacaoResponse<Item>> GetItem(int skip, int take, string? valor = "", bool itemDesc = true, int campoOrdenar = 1)
+        public static async Task<List<Item>> GetItem(string? prCodigoReferencia)
+        {
+            List<Item> lista = new List<Item>();
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:7170/api/");
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.Timeout = new TimeSpan(0, 0, 30);
+
+            string url = "Item";
+
+            if (!String.IsNullOrEmpty(prCodigoReferencia))
+                url += "?codigoReferencia=" + prCodigoReferencia;
+
+            HttpResponseMessage response = await client.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                lista = JsonConvert.DeserializeObject<List<Item>>(await response.Content.ReadAsStringAsync());
+            }
+
+            return lista;
+        }
+
+
+        public static async Task<PaginacaoResponse<Item>> GetItemPaginacao(int skip, int take, string? valor = "", bool itemDesc = true, int campoOrdenar = 1)
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7170/api/");

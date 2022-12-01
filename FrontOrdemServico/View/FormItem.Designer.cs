@@ -145,6 +145,7 @@
             this.textBoxObservacao.Location = new System.Drawing.Point(8, 116);
             this.textBoxObservacao.Multiline = true;
             this.textBoxObservacao.Name = "textBoxObservacao";
+            this.textBoxObservacao.ShortcutsEnabled = false;
             this.textBoxObservacao.Size = new System.Drawing.Size(589, 90);
             this.textBoxObservacao.TabIndex = 9;
             // 
@@ -175,6 +176,7 @@
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
