@@ -12,14 +12,20 @@ namespace FrontOrdemServico.Servicos
 {
     public class EstoqueServicos
     {
-        public static async Task<List<Estoque>> GetEstoque()
+        public static async Task<List<Estoque>> GetEstoque(string prCodigoReferencia = "")
         {
             List<Estoque> lista = new List<Estoque>();
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7170/api/");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             client.Timeout = new TimeSpan(0, 0, 30);
-            HttpResponseMessage response = await client.GetAsync("Estoque");
+
+            string url = "Estoque";
+
+            if (!String.IsNullOrEmpty(prCodigoReferencia))
+                url += "?codigoReferenciaItem=" + prCodigoReferencia;
+
+            HttpResponseMessage response = await client.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
             {
@@ -31,7 +37,6 @@ namespace FrontOrdemServico.Servicos
 
         public static async Task<bool> PostEstoque(Estoque Estoque)
         {
-            string retorno = "Erro ao cadastrar o Estoque";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7170/api/");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -39,7 +44,36 @@ namespace FrontOrdemServico.Servicos
 
             HttpResponseMessage response = await client.PostAsJsonAsync("Estoque", Estoque);
 
-            return response.IsSuccessStatusCode;
+            if (!response.IsSuccessStatusCode)
+            {
+                MessageBox.Show("Erro ao cadastrar/alterar o estoque: " + await response.Content.ReadAsStringAsync());
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public static async Task<bool> DeleteEstoque(string codigoReferencia)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:7170/api/");
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.Timeout = new TimeSpan(0, 0, 30);
+
+            string url = $"Estoque?codigoReferencia={codigoReferencia}";
+            HttpResponseMessage response = await client.DeleteAsync(url);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                MessageBox.Show(await response.Content.ReadAsStringAsync());
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
     }

@@ -69,7 +69,7 @@ namespace FrontOrdemServico.View
             {
                 MessageBox.Show("Item alterado com sucesso!");
                 this.Close();
-            }            
+            }                
         }
 
         private async void SalvarCadastrando()

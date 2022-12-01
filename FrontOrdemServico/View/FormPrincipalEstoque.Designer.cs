@@ -40,6 +40,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.buttonExcluirEstoque = new System.Windows.Forms.Button();
             this.buttonAlterarEstoque = new System.Windows.Forms.Button();
             this.buttonNovoEstoque = new System.Windows.Forms.Button();
             this.buttonSairEstoque = new System.Windows.Forms.Button();
@@ -134,12 +135,25 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.buttonExcluirEstoque);
             this.panel4.Controls.Add(this.buttonAlterarEstoque);
             this.panel4.Controls.Add(this.buttonNovoEstoque);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(232, 50);
+            this.panel4.Size = new System.Drawing.Size(320, 50);
             this.panel4.TabIndex = 0;
+            // 
+            // buttonExcluirEstoque
+            // 
+            this.buttonExcluirEstoque.Image = global::FrontOrdemServico.Properties.Resources.Excluir32X32;
+            this.buttonExcluirEstoque.Location = new System.Drawing.Point(216, 7);
+            this.buttonExcluirEstoque.Name = "buttonExcluirEstoque";
+            this.buttonExcluirEstoque.Size = new System.Drawing.Size(99, 40);
+            this.buttonExcluirEstoque.TabIndex = 4;
+            this.buttonExcluirEstoque.Text = "Excluir";
+            this.buttonExcluirEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonExcluirEstoque.UseVisualStyleBackColor = true;
+            this.buttonExcluirEstoque.Click += new System.EventHandler(this.buttonExcluirEstoque_Click);
             // 
             // buttonAlterarEstoque
             // 
@@ -169,10 +183,10 @@
             // buttonSairEstoque
             // 
             this.buttonSairEstoque.Image = global::FrontOrdemServico.Properties.Resources.Sair32X32;
-            this.buttonSairEstoque.Location = new System.Drawing.Point(6, 7);
+            this.buttonSairEstoque.Location = new System.Drawing.Point(6, 8);
             this.buttonSairEstoque.Name = "buttonSairEstoque";
             this.buttonSairEstoque.Size = new System.Drawing.Size(84, 40);
-            this.buttonSairEstoque.TabIndex = 6;
+            this.buttonSairEstoque.TabIndex = 99;
             this.buttonSairEstoque.Text = "Sair";
             this.buttonSairEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSairEstoque.UseVisualStyleBackColor = true;
@@ -184,35 +198,36 @@
             this.panel5.Location = new System.Drawing.Point(1094, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(96, 50);
-            this.panel5.TabIndex = 1;
+            this.panel5.TabIndex = 99;
             // 
             // buttonPesquisaEstoque
             // 
             this.buttonPesquisaEstoque.Image = global::FrontOrdemServico.Properties.Resources.Lupa32X32;
-            this.buttonPesquisaEstoque.Location = new System.Drawing.Point(758, 7);
+            this.buttonPesquisaEstoque.Location = new System.Drawing.Point(668, 7);
             this.buttonPesquisaEstoque.Name = "buttonPesquisaEstoque";
             this.buttonPesquisaEstoque.Size = new System.Drawing.Size(99, 40);
-            this.buttonPesquisaEstoque.TabIndex = 5;
+            this.buttonPesquisaEstoque.TabIndex = 4;
             this.buttonPesquisaEstoque.Text = "Pesquisar";
             this.buttonPesquisaEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPesquisaEstoque.UseVisualStyleBackColor = true;
+            this.buttonPesquisaEstoque.Click += new System.EventHandler(this.buttonPesquisaEstoque_Click);
             // 
             // textBoxPesquisaEstoque
             // 
             this.textBoxPesquisaEstoque.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxPesquisaEstoque.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxPesquisaEstoque.Location = new System.Drawing.Point(8, 9);
+            this.textBoxPesquisaEstoque.Location = new System.Drawing.Point(3, 9);
             this.textBoxPesquisaEstoque.Name = "textBoxPesquisaEstoque";
-            this.textBoxPesquisaEstoque.Size = new System.Drawing.Size(744, 36);
-            this.textBoxPesquisaEstoque.TabIndex = 4;
+            this.textBoxPesquisaEstoque.Size = new System.Drawing.Size(659, 36);
+            this.textBoxPesquisaEstoque.TabIndex = 3;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.buttonPesquisaEstoque);
             this.panel6.Controls.Add(this.textBoxPesquisaEstoque);
-            this.panel6.Location = new System.Drawing.Point(231, 0);
+            this.panel6.Location = new System.Drawing.Point(321, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(863, 50);
+            this.panel6.Size = new System.Drawing.Size(773, 50);
             this.panel6.TabIndex = 2;
             // 
             // panel1
@@ -234,11 +249,14 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPrincipalEstoque";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estoque";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipalEstoque_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEstoque)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -270,5 +288,6 @@
         private DataGridViewTextBoxColumn CodigoItem_Estoque;
         private DataGridViewTextBoxColumn nomeItem_Estoque;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private Button buttonExcluirEstoque;
     }
 }

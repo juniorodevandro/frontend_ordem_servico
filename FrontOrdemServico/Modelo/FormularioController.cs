@@ -67,7 +67,6 @@ namespace FrontOrdemServico.Modelo
             }
         }
 
-
         protected void FormController_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -80,5 +79,45 @@ namespace FrontOrdemServico.Modelo
                 SendKeys.Send("{TAB}");
             }
         }
+
+        protected void FormularioController_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+                {
+                    e.Handled = true;
+                }
+
+                //if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+                //{
+                //    e.Handled = true;
+                //}
+            }
+            catch
+            {
+                MessageBox.Show("Valor inválido");
+            }
+        }
+
+        protected void textBox_Click(object sender, EventArgs e)
+        {
+            (sender as TextBoxBase).SelectAll();
+        }
+
+        protected void textBoxToCurrency(object sender, EventArgs e)
+        {
+            if (sender != null)
+            {
+                TextBox textBox = sender as TextBox;
+
+                if (!String.IsNullOrEmpty(textBox.Text))
+                {
+                    var valor = Convert.ToDecimal(textBox.Text);
+                    textBox.Text = String.Format("{0:N2}", valor);
+                }
+            }
+        }
+
     }
 }

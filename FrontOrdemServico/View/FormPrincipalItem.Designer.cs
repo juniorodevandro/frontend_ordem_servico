@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipalItem));
             this.buttonExcluirItem = new System.Windows.Forms.Button();
             this.buttonAlterarItem = new System.Windows.Forms.Button();
             this.buttonNovoItem = new System.Windows.Forms.Button();
@@ -79,7 +80,7 @@
             this.buttonExcluirItem.Text = "Excluir";
             this.buttonExcluirItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExcluirItem.UseVisualStyleBackColor = true;
-            this.buttonExcluirItem.Click += new System.EventHandler(this.buttonExcluirItem_Click);
+            this.buttonExcluirItem.Click += new System.EventHandler(this.buttonNovoItem_Click);
             // 
             // buttonAlterarItem
             // 
@@ -404,6 +405,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

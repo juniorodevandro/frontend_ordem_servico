@@ -72,7 +72,7 @@ namespace FrontOrdemServico.Servicos
 
             if (!response.IsSuccessStatusCode)
             {
-                MessageBox.Show("Erro ao cadastrar o item" + await response.Content.ReadAsStringAsync());
+                MessageBox.Show("Erro ao cadastrar o item: " + await response.Content.ReadAsStringAsync());
                 return false;
             }
             else
@@ -92,7 +92,7 @@ namespace FrontOrdemServico.Servicos
 
             if (!response.IsSuccessStatusCode)
             {
-                MessageBox.Show("Erro ao alterar o item" + await response.Content.ReadAsStringAsync());
+                MessageBox.Show("Erro ao alterar o item: " + await response.Content.ReadAsStringAsync());
                 return false;
             }
             else
