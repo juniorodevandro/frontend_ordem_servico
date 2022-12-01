@@ -22,8 +22,14 @@ namespace FrontOrdemServico
 
         private void itemToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            FormItem form = new FormItem();
+            FormPrincipalItem form = new FormPrincipalItem();
             form.ShowDialog();
+        }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //FormConsulta form = new FormConsulta();
+            //form.ShowDialog();
         }
     }
 }

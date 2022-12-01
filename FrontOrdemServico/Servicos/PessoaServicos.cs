@@ -16,7 +16,7 @@ namespace FrontOrdemServico.Servicos
         {
             List<Pessoa> lista = new List<Pessoa>();
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7071/api/");
+            client.BaseAddress = new Uri("https://localhost:7170/api/");
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json")
                 );
@@ -36,9 +36,9 @@ namespace FrontOrdemServico.Servicos
 
         public static async Task<string> PostPessoa(Pessoa Pessoa)
         {
-            string retorno = "Erro ao cadastrar Pessoa";
+            string retorno = "Erro ao cadastrar a pessoa";
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7071/api/");
+            client.BaseAddress = new Uri("https://localhost:7170/api/");
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json")
                 );
@@ -49,8 +49,7 @@ namespace FrontOrdemServico.Servicos
 
             if (response.IsSuccessStatusCode)
             {
-                //retorno = await response.Content.ReadAsStringAsync();
-                retorno = "Pessoa cadastrado";
+                retorno = "Pessoa cadastrada";
             }
 
             return retorno;
