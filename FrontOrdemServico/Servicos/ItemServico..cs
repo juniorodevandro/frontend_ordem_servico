@@ -13,14 +13,14 @@ namespace FrontOrdemServico.Servicos
 {
     public class ItemServicos
     {
-        public static async Task<PaginacaoResponse<Item>?> GetItem(int skip, int take, string? valor = "")
+        public static async Task<PaginacaoResponse<Item>> GetItem(int skip, int take, string? valor = "", bool itemDesc = true, int campoOrdenar = 1)
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7170/api/");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             client.Timeout = new TimeSpan(0, 0, 30);
 
-            string url = $"Item/Paginacao?skip={skip}&take={take}";
+            string url = $"Item/Paginacao?skip={skip}&take={take}&itemDesc={itemDesc}&ordenar={campoOrdenar}";
 
             if (!String.IsNullOrEmpty(valor))
                 url += $"&valor={valor}";

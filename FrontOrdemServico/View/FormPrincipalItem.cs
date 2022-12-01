@@ -24,7 +24,13 @@ namespace FrontOrdemServico.View
 
         private async void AtualizaTela()
         {
-            this.paginacao = await ItemServicos.GetItem(int.Parse(paginaItem.Value.ToString()), int.Parse(qtdePaginaItem.Value.ToString()), textBoxPesquisaItem.Text);
+            int skip = int.Parse(paginaItem.Value.ToString());
+            int take = int.Parse(qtdePaginaItem.Value.ToString());
+            string valor = textBoxPesquisaItem.Text.Trim();
+            bool ordemDesc = comboBoxOrdenacaoItem.SelectedIndex > 0;
+            int campoOrdenar = comboBoxPorItem.SelectedIndex;
+
+            this.paginacao = await ItemServicos.GetItem(skip, take, valor, ordemDesc, campoOrdenar);
 
             dataGridView.DataSource = paginacao.Dados;
         }
@@ -154,7 +160,8 @@ namespace FrontOrdemServico.View
 
             int qtdePagina = (int)Math.Ceiling(paginas);
 
-            paginaItem.Value = qtdePagina;
+            if (qtdePagina > 0)
+                paginaItem.Value = qtdePagina;
         }
 
         private void qtdePaginaItem_ValueChanged(object sender, EventArgs e)
@@ -164,10 +171,35 @@ namespace FrontOrdemServico.View
 
         private void FormPrincipalItem_KeyDown(object sender, KeyEventArgs e)
         {
-            FormController_KeyDown(sender, e);
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonPesquisaItem_Click(sender, e);
+            }
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
 
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FormPrincipalItem_Load(object sender, EventArgs e)
+        {
+            comboBoxOrdenacaoItem.SelectedIndex = 0;
+
+            comboBoxPorItem.SelectedIndex = 0;
+        }
+
+        private void comboBoxOrdenacaoItem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AtualizaTela();
+        }
+
+        private void comboBoxPorItem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AtualizaTela();
+        }
+
+        private void buttonPesquisaItem_KeyDown(object sender, KeyEventArgs e)
         {
 
         }

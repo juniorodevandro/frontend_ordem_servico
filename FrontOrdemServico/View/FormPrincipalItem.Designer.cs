@@ -39,6 +39,7 @@
             this.buttonSairItem = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.comboBoxPorItem = new System.Windows.Forms.ComboBox();
             this.comboBoxOrdenacaoItem = new System.Windows.Forms.ComboBox();
             this.qtdePaginaItem = new System.Windows.Forms.NumericUpDown();
             this.paginaItem = new System.Windows.Forms.NumericUpDown();
@@ -135,6 +136,7 @@
             // textBoxPesquisaItem
             // 
             this.textBoxPesquisaItem.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPesquisaItem.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBoxPesquisaItem.Location = new System.Drawing.Point(8, 9);
             this.textBoxPesquisaItem.Name = "textBoxPesquisaItem";
             this.textBoxPesquisaItem.Size = new System.Drawing.Size(654, 36);
@@ -172,6 +174,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.comboBoxPorItem);
             this.panel7.Controls.Add(this.comboBoxOrdenacaoItem);
             this.panel7.Controls.Add(this.qtdePaginaItem);
             this.panel7.Controls.Add(this.paginaItem);
@@ -184,29 +187,47 @@
             this.panel7.Size = new System.Drawing.Size(1190, 54);
             this.panel7.TabIndex = 0;
             // 
+            // comboBoxPorItem
+            // 
+            this.comboBoxPorItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPorItem.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxPorItem.FormattingEnabled = true;
+            this.comboBoxPorItem.Items.AddRange(new object[] {
+            "Código",
+            "Nome",
+            "Código de referência",
+            "Tipo"});
+            this.comboBoxPorItem.Location = new System.Drawing.Point(719, 7);
+            this.comboBoxPorItem.Name = "comboBoxPorItem";
+            this.comboBoxPorItem.Size = new System.Drawing.Size(459, 38);
+            this.comboBoxPorItem.TabIndex = 14;
+            this.comboBoxPorItem.SelectedIndexChanged += new System.EventHandler(this.comboBoxPorItem_SelectedIndexChanged);
+            // 
             // comboBoxOrdenacaoItem
             // 
-            this.comboBoxOrdenacaoItem.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxOrdenacaoItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOrdenacaoItem.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxOrdenacaoItem.FormattingEnabled = true;
             this.comboBoxOrdenacaoItem.Items.AddRange(new object[] {
             "Ascendente",
             "Descendente"});
-            this.comboBoxOrdenacaoItem.Location = new System.Drawing.Point(575, 9);
+            this.comboBoxOrdenacaoItem.Location = new System.Drawing.Point(568, 7);
             this.comboBoxOrdenacaoItem.Name = "comboBoxOrdenacaoItem";
-            this.comboBoxOrdenacaoItem.Size = new System.Drawing.Size(145, 36);
+            this.comboBoxOrdenacaoItem.Size = new System.Drawing.Size(145, 38);
             this.comboBoxOrdenacaoItem.TabIndex = 13;
+            this.comboBoxOrdenacaoItem.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrdenacaoItem_SelectedIndexChanged);
             // 
             // qtdePaginaItem
             // 
-            this.qtdePaginaItem.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.qtdePaginaItem.Location = new System.Drawing.Point(504, 10);
+            this.qtdePaginaItem.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.qtdePaginaItem.Location = new System.Drawing.Point(497, 9);
             this.qtdePaginaItem.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.qtdePaginaItem.Name = "qtdePaginaItem";
-            this.qtdePaginaItem.Size = new System.Drawing.Size(65, 34);
+            this.qtdePaginaItem.Size = new System.Drawing.Size(65, 36);
             this.qtdePaginaItem.TabIndex = 12;
             this.qtdePaginaItem.Value = new decimal(new int[] {
             10,
@@ -217,15 +238,15 @@
             // 
             // paginaItem
             // 
-            this.paginaItem.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.paginaItem.Location = new System.Drawing.Point(216, 11);
+            this.paginaItem.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.paginaItem.Location = new System.Drawing.Point(216, 9);
             this.paginaItem.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.paginaItem.Name = "paginaItem";
-            this.paginaItem.Size = new System.Drawing.Size(65, 34);
+            this.paginaItem.Size = new System.Drawing.Size(65, 36);
             this.paginaItem.TabIndex = 9;
             this.paginaItem.Value = new decimal(new int[] {
             1,
@@ -261,7 +282,7 @@
             // buttonProximoItem
             // 
             this.buttonProximoItem.Image = global::FrontOrdemServico.Properties.Resources.Setaproxima32X32;
-            this.buttonProximoItem.Location = new System.Drawing.Point(291, 7);
+            this.buttonProximoItem.Location = new System.Drawing.Point(287, 7);
             this.buttonProximoItem.Name = "buttonProximoItem";
             this.buttonProximoItem.Size = new System.Drawing.Size(99, 40);
             this.buttonProximoItem.TabIndex = 10;
@@ -273,7 +294,7 @@
             // buttonUltimaItem
             // 
             this.buttonUltimaItem.Image = global::FrontOrdemServico.Properties.Resources.SetaUltima32X32;
-            this.buttonUltimaItem.Location = new System.Drawing.Point(399, 7);
+            this.buttonUltimaItem.Location = new System.Drawing.Point(392, 7);
             this.buttonUltimaItem.Name = "buttonUltimaItem";
             this.buttonUltimaItem.Size = new System.Drawing.Size(99, 40);
             this.buttonUltimaItem.TabIndex = 11;
@@ -345,6 +366,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Item";
+            this.Load += new System.EventHandler(this.FormPrincipalItem_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipalItem_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -387,5 +409,6 @@
         private DataGridViewTextBoxColumn Nome;
         private DataGridViewTextBoxColumn codigo;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private ComboBox comboBoxPorItem;
     }
 }
